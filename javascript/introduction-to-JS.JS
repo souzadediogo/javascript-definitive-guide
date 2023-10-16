@@ -53,6 +53,13 @@ WHAT IS JAVASCRIPT?
                 /* to open a multi-line comment and  to close it use */
                     /*
             EXPRESSIONS
+             An expression is a phrase in JS that can be evaluated to produce a value.
+             If JS expressions are like phrases, then JS statements are like full sentences.
+             Expressions: evaluates, but doesn't alter any state of the program.
+             Statement: don't have a value, but they alter the state of the program. Examples:
+                A variable declatarion;
+                An assignment statetment;
+                Control Structures: such as conditionals or loops
                 Initializer Expression:
                     Is an expressions that initializes a variable and assigns it to a value;
                     You can initialize a variable to any of the supported types: */
@@ -61,6 +68,25 @@ WHAT IS JAVASCRIPT?
                         var naturals = [1, 2, 3]  //Intitializes a variable named naturals 
                                                  //  and assignes an array with the numbers 1, 2 and 3
             /*OPERATORS
-
+                Operators are the most common way to form expressions.
+                They act on values (operands) to produce a new value */
+                5 + 5        // Evaluates to 10
+                10 / 5       // Evaluates to 2
+                2 * 10       // Evaluates to 20
+                4 + 4        // Evaluates to 8
+                "4" + "4"   // Evaluates to 44 > because the operand is a string,
+                            //the + operator acts concatening the operands
+                //Shorthand arithmetic Operators
+                    let count = 0;  // Defines a variable
+                    count++;        // Increment the variable count
+                    count--;        // Decrement the variable count
+                    count += 2;     // Adds two to variable
+                    count *= 3;     // Multiply the assigned value of count by 3. Same as count = count * 3
+                    count;          //variable names are expressions too
+            /*FUNCTIONS
+                A function is a named and parameterized block of Javascript code that you define once
+                and can invoke several times in the future.
             */
-        
+
+
+                
