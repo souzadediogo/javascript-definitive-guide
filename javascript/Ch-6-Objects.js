@@ -100,3 +100,34 @@ let addr = "";
 for (let i = 0; i < 4; i++) {
   add += customer[`address${i}`] + "\n";
 }
+/*          This code reads and concatenates address0, address1.. up to 4.
+            This demonstrates the flexibility of using the array notation to access properties of an object with string expressions.
+
+            INHERITANCE
+            JS objects has a set of "own properties" and they also inhertir a set o properties from their prototype object.
+            If you query a property of an object an it doesn't have an own property, JS will go to the next prototype object 
+            in the prototype chain and look for that property there.*/
+let o = {}; // o inherits object methods from Object.prototype
+o.x = 1; // and it now has an own property x
+let p = Object.create(o); // p inherits properties from o and Object.prototype
+p.y = 2; // and had own property y
+let q = Object.create(p); // q inherits properties from p, o, and ...
+q.z = 3; // ... Object.prototype and has an own property z.
+let f = q.toString(); // toString is inherited from Object.prototype
+q.x + q.y; // => 3; x and y are inherited from o and p
+/*
+            We can also assign x to the object O. This would create an "own property". This does not affect the x value on prototype chain.
+            Rather, it only creates a new own property and hides the prototype property when querying for it.This way we can selectively 
+            "override" inherited properties.
+            
+            PROPERTY ACCESS ERRORS
+            Querying properties that do not exist will evaluate to undefined.
+            But if you try to query an object that doesn't existe, you'll get a TypeError.
+            This mean that property access will fail if the left hand side of the access . or [] is null or undefined.
+            In strict-mode you'll also get an error if you try to set a property when: (1) the property is read-only; 
+            (2) it has inherited property that is read-only; or (3) the object and its prototype objects don't have
+            the property and the objects extensible attribute is false;
+
+            DELETING PROPERTIES
+            
+            */
